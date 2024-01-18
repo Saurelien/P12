@@ -1,3 +1,6 @@
 from django.db import models
+from epic_event_crm.collaborator.models import Collaborator
 
-# Create your models here.
+
+class Support(models.Model):
+    collaborateur = models.ForeignKey(Collaborator, on_delete=models.CASCADE, related_name='supports')
